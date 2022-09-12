@@ -6,7 +6,7 @@ using NubSkull.Implementations.Commands;
 
 namespace NubSkull.Interfaces.ICommands;
 
-public interface IRegisterUserCommand : IRequest<BaseResponse>
+public interface IRegisterUserCommand 
 {
     public CreateUserRequestModel CommandModel {get;set;}
 }

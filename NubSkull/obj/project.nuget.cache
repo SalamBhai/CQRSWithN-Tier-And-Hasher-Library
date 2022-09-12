@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "u97rjzbPslDH8kl8V3cSZ0bwNK+kqSBzHfGQt83/XiJQItJ1B7gCsT6V2wmMQwmQSB2zLR7HYpUgUlQKpV+QFw==",
+  "dgSpecHash": "CG3c2lCi1OWK8caj8hosnbompAcRpMQiMnDTYywe7Ag/8NqPXy1PNKMeyG8aiHWConuShXWh0Igjh3+zJ6iwgA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\user\\Desktop\\NubSkull\\NubSkull\\NubSkull.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\NubSkull\\NubSkull\\NubSkull.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

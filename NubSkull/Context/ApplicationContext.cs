@@ -12,7 +12,9 @@ public class ApplicationContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
+        modelBuilder.Entity<User>().HasMany<UserRole>().WithOne(t => t.User).HasForeignKey(t => t.UserId);
+        modelBuilder.Entity<User>().HasIndex(u => u.EmailAddress).IsUnique();
+        modelBuilder.Entity<Role>().HasMany<UserRole>().WithOne(t => t.Role).HasForeignKey(t => t.RoleId);
     }
 
     public DbSet<User> Users{get;set;}

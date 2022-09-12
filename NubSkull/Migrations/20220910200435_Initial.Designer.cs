@@ -11,7 +11,7 @@ using NubSkull.Context;
 namespace NubSkull.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220902112632_Initial")]
+    [Migration("20220910200435_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,7 +40,6 @@ namespace NubSkull.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<bool>("IsDeleted")
@@ -53,7 +52,6 @@ namespace NubSkull.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -80,11 +78,9 @@ namespace NubSkull.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("EmailAddress")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("HashedPassword")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<bool>("IsDeleted")
@@ -97,7 +93,6 @@ namespace NubSkull.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");

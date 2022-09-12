@@ -8,12 +8,13 @@ using NubSkull.Interfaces.ICommands;
 
 namespace NubSkull.Implementations.Commands;
 
-public class RegisterRoleCommand : IRegisterRoleCommand
+public class RegisterRoleCommand : IRequest<BaseResponse>
 {
-    public CreateRoleRequestModel CreateRoleRequestModel { get; set; }
+ public string Name {get; set; }
+  public string Description {get; set;}
 }
 
-public class RegisterRoleCommandHandler : IRequestHandler<IRegisterRoleCommand, BaseResponse>
+public class RegisterRoleCommandHandler : IRequestHandler<RegisterRoleCommand, BaseResponse>
 {
     private readonly ApplicationContext _context;
     private readonly IHttpContextAccessor _httpContext;
@@ -24,9 +25,9 @@ public class RegisterRoleCommandHandler : IRequestHandler<IRegisterRoleCommand, 
         _httpContext = httpContext;
     }
 
-    public async Task<BaseResponse> Handle(IRegisterRoleCommand request, CancellationToken cancellationToken)
+    public async Task<BaseResponse> Handle(RegisterRoleCommand request, CancellationToken cancellationToken)
     {
-       if (await _context.Roles.AnyAsync( role => role.Name == request.CreateRoleRequestModel.Name ))
+       if (await _context.Roles.AnyAsync( role => role.Name == request.Name ))
        {
            return new BaseResponse
            {
@@ -37,10 +38,10 @@ public class RegisterRoleCommandHandler : IRequestHandler<IRegisterRoleCommand, 
 
        var role = new Role
        {
-          Name = request.CreateRoleRequestModel.Name,
-          Description = request.CreateRoleRequestModel.Description,
+          Name = request.Name,
+          Description = request.Description,
           CreatedOn = DateTime.UtcNow,
-          CreatedBy = int.Parse(_httpContext.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier)),
+         // CreatedBy = int.Parse(_httpContext.HttpContext?.User?.FindFirstValue(ClaimTypes.NameIdentifier)),
        };
        await _context.Roles.AddAsync(role);
        await _context.SaveChangesAsync();

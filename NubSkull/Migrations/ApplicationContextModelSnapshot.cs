@@ -38,7 +38,6 @@ namespace NubSkull.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<bool>("IsDeleted")
@@ -51,7 +50,6 @@ namespace NubSkull.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -78,11 +76,9 @@ namespace NubSkull.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("EmailAddress")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("HashedPassword")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<bool>("IsDeleted")
@@ -95,10 +91,12 @@ namespace NubSkull.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmailAddress")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });

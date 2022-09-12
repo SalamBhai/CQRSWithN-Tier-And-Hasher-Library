@@ -41,3 +41,6 @@ C:\Users\user\Desktop\NubSkull\NubSkull\obj\Debug\net6.0\refint\NubSkull.dll
 C:\Users\user\Desktop\NubSkull\NubSkull\obj\Debug\net6.0\NubSkull.pdb
 C:\Users\user\Desktop\NubSkull\NubSkull\obj\Debug\net6.0\NubSkull.genruntimeconfig.cache
 C:\Users\user\Desktop\NubSkull\NubSkull\obj\Debug\net6.0\ref\NubSkull.dll
+c:\Users\user\Desktop\NubSkull\NubSkull\bin\Debug\net6.0\MediatR.dll
+c:\Users\user\Desktop\NubSkull\NubSkull\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\user\Desktop\NubSkull\NubSkull\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

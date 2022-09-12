@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using NubSkull.Contract;
 
 namespace NubSkull.Identity;
